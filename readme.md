@@ -1,31 +1,39 @@
-<!-- prettier-ignore-start -->
+# Final Task Manager – Shay O
 
-Copyright © Written by [Yariv Gilad](https://yarivgilad.com) 
-<hr>
-   
-## Show me that list!!
+A React task management application.
 
-1. In the `<App>` component create an Ajax HTTP request 
-   to the following [REST API endpoint URL](https://api.npoint.io/86690d80ff3d455133f0)    
-   use fetch, async await, `useState` and `useEffect` as needed.
+The application allows users to:
+- Add new tasks with text and an optional deadline
+- Edit existing tasks
+- Delete tasks
+- Mark tasks as completed
+- Filter tasks by status (All / Active / Completed)
+- See how many active tasks remain
+- Save tasks in LocalStorage so they remain after page refresh
+- View the creation date and time for each task
 
-2. The goal is to render the array of data objects
-   returned from the fetch call in the `<List>` component.
+## Running the Project Locally
 
-3. In the `<List>` component, loop over the array
-   and create the following for each item:
+```bash
+npm install
+npm run dev
 
-   a) An `<li>` element with a css class of 'card-item'    
-   b) Inside the `<li>` element create an instance of the `<Card>` component and pass it the data it needs using props.
-```
-  ,_,
- (O,O)
- (   )
---"-"-------
-```
-Good luck!!
-[Yariv](https://www.linkedin.com/in/yarivgilad/) 
+App – Manages the main tasks state, CRUD logic, filtering, and saving/loading from LocalStorage.
 
-💡 "Luck is the residue of good design" - Branch Rickey
+TaskForm – Form for adding a new task, including task text and deadline selection.
 
-<!-- prettier-ignore-end -->
+FilterBar – Controls task filtering and visually highlights the active filter.
+
+TaskList – Displays the list of tasks according to the selected filter.
+
+TaskItem – Represents a single task with options to toggle completion, edit, delete, and display time information.
+
+TaskCounter – Displays the number of active (not completed) tasks remaining.
+
+Known Limitations / Issues
+
+There is currently no validation to prevent setting a deadline in the past.
+
+Tasks are not automatically sorted by date.
+
+Update README for final submission
