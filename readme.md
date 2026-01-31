@@ -35,5 +35,3 @@ Known Limitations / Issues
 There is currently no validation to prevent setting a deadline in the past.
 
 Tasks are not automatically sorted by date.
-
-Update README for final submission
