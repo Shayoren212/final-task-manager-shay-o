@@ -1,221 +1,164 @@
-@import url("https://fonts.googleapis.com/css?family=Expletus+Sans|Raleway|Griffy|Yanone+Kaffeesatz:400,700");
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
 
-html,
 body {
-  height: 100%;
-}
-html {
-  font-size: 10px;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: papayawhip;
-  background: -moz-linear-gradient(
-    top,
-    #f5f5dc 0%,
-    #d2b48c 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #f5f5dc 0%,
-    #d2b48c 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #f5f5dc 0%,
-    #d2b48c 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-* {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /*border:aqua dashed 3px; */
-  /*color:papayawhip*/
-}
-li {
-  list-style-type: none;
-}
-/*--------------------*/
-.app {
-  background: Cornsilk;
-  padding: 8.5rem 1.5rem 1.5rem;
-  border-radius: 0.4rem;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0.4rem 1.5rem DimGrey;
-  position: relative;
-  margin-top: 7rem;
-}
-.header {
-  background: lightsalmon;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-radius: 0.4rem 0.4rem 0 0;
-  height: 9rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.load-label{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60rem; 
-  height: 40rem;
-  font-size: 5rem;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  color: slategray;
-}
-.filter {
-  height: 3.5rem;
-  width: 24rem;
-  outline: none;
-  border-radius: 0.5rem;
-  border: white 2px solid;
-  transition: border 0.5s;
-  padding: 1rem;
-}
-.filter:focus {
-  border: tomato 2px solid;
-}
-.filter_title {
-  font-family: "Expletus Sans";
-  text-align: left;
-  font-size: 2rem;
-  font-weight: 400;
-  color: darkred;
+  background: linear-gradient(180deg, #f7f2ff 0%, #ffffff 60%);
+  color: #1f1b2e;
 }
 
-.headline {
-  font-size: 5rem;
-  font-weight: normal;
-  font-family: "Griffy", cursive;
-  text-align: center;
-  color: slategray;
+.container {
+  max-width: 580px;
+  margin: 52px auto;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #eadcff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(120, 80, 200, 0.12);
+  backdrop-filter: blur(6px);
 }
-.paragraph {
-  font-size: 3.8rem;
-  font-weight: 400;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  text-align: center;
-  color: slategray;
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 26px;
+  letter-spacing: 0.2px;
 }
-.white-text {
-  color: mintcream;
-}
-/*.thumb{
-	border-radius: .8rem;
-    margin-top: 3rem;
-	padding: 3rem 7.5rem;
-	background-color: DarkSalmon;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
-.top-bar {
-  background: slategray;
-  width: 100%;
-  height: 70px;
-  padding: 20px;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
+
+.row {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  gap: 10px;
 }
-.top-bar h1 {
-  font-size: 3rem;
-  font-weight: normal;
-  font-family: "Griffy", cursive;
-  color: papayawhip;
+
+.input {
+  flex: 1;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid #e6d7ff;
+  background: #ffffff;
+  font-size: 14px;
+  outline: none;
 }
-.logo {
-  height: 5rem;
-  animation: spin 2s linear infinite;
+
+.input:focus {
+  border-color: #bfa2ff;
+  box-shadow: 0 0 0 4px rgba(191, 162, 255, 0.25);
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.list-title {
-  padding: 1.4rem;
-  font-family: "Expletus Sans";
-  font-size: 3.2rem;
-  font-weight: 400;
-  text-align: center;
-  color: slategray;
-}
-.cards-list {
-  background: oldlace;
-  height: 77vh;
-  min-width: 37rem;
-  /*border: #0000b9 solid 3px;*/
-  border-radius: 0.4rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  box-shadow: 0 0.2rem 0.8rem DimGrey;
-}
-.card-item:nth-child(even) {
-  background: honeydew;
-}
-.card-item:nth-child(odd) {
-  background: white;
-}
-.card {
-  padding: 2rem 2.8rem;
+
+.btn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e6d7ff;
+  background: #fff;
   cursor: pointer;
+  color: #2a2240;
+  transition: transform 0.05s ease, background 0.15s ease, border 0.15s ease;
+}
+
+.btn:hover {
+  background: #faf7ff;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.primary {
+  border-color: #bfa2ff;
+  background: linear-gradient(135deg, #c7a8ff 0%, #a78bfa 45%, #8b5cf6 100%);
+  color: #fff;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.filterBtnActive {
+  font-weight: 700;
+  border-color: #bfa2ff;
+  background: #f4edff;
+}
+
+.muted {
+  margin-top: 12px;
+  color: #5b4b78;
+}
+
+.list {
+  margin-top: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 12px;
+  border: 1px solid #eadcff;
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 10px;
 }
-.card:hover {
-  background: paleturquoise;
+
+.taskLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
 }
-.card:hover .thumb {
-  box-shadow: 0 0.4rem 1.5rem DimGrey;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
+
+.taskLeft span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.card:active {
-  background: skyblue;
-  color: white;
+
+.done {
+  text-decoration: line-through;
+  color: #8a7aa8;
 }
-.card:active .paragraph {
-  color: white;
+
+.taskActions {
+  display: flex;
+  gap: 8px;
 }
-.card:active .thumb {
-  box-shadow: 0 0.4rem 1.5rem DimGrey;
+
+.iconBtn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid #e6d7ff;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
 }
-.texts-box {
-  padding-left: 2.8rem;
+
+.iconBtn:hover {
+  background: #faf7ff;
 }
-.card-title {
-  font-family: "Expletus Sans";
-  text-align: left;
-  font-size: 2.8rem;
+
+.iconBtn:active {
+  transform: translateY(1px);
 }
-.card-msg {
-  font-family: "Raleway";
-  font-size: 1.4rem;
-  max-width: 35rem;
+
+.iconBtn.primary {
+  border-color: #bfa2ff;
+  background: #f4edff;
 }
-.thumb {
-  height: 10rem;
-  width: 10rem;
-  /*border: #004141 solid 4px;*/
-  border-radius: 50%;
-  /*padding: 10px;*/
-  background-color: darksalmon;
-  transition: box-shadow 150ms, margin 150ms, padding 150ms;
+
+.iconBtn.danger {
+  border-color: #ffc9de;
+  background: #fff5f9;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
 }
